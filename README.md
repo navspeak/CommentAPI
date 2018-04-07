@@ -1,5 +1,6 @@
 # CommentProj
 
+
 ## List all comments
 GET /comments
 
@@ -20,8 +21,9 @@ GET http://localhost:8080/comments
 ## POST a comment
 
 POST /comments
-
-Body: { "text" : "Your text" }
+```json
+{ "text" : "Your text" }
+```json
 
 NOTE: if you want to update an existing comment provide the comment ID in the JSON Body
 e.g:
@@ -34,10 +36,11 @@ e.g:
 ## OFFENSIVE Comment is not allowed
 
 POST 
+```json
  {
         "text": "This is a bad comment."
   }
-  
+```
 Response:
 ```json
 {
