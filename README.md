@@ -6,6 +6,7 @@ GET /comments
 
 Example:
 GET http://localhost:8080/comments
+
 ```json
 [
     {
@@ -18,15 +19,20 @@ GET http://localhost:8080/comments
     }
 ]
 ```
+
 ## POST a comment
 
 POST /comments
+
 ```json
-{ "text" : "Your text" }
-```json
+{ 
+   "text": "Your text" 
+}
+```
 
 NOTE: if you want to update an existing comment provide the comment ID in the JSON Body
 e.g:
+
 ```json
     {
         "id": 1,
@@ -36,11 +42,13 @@ e.g:
 ## OFFENSIVE Comment is not allowed
 
 POST 
+
 ```json
  {
         "text": "This is a bad comment."
   }
 ```
+
 Response:
 ```json
 {
